@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message{
+            color: blue;
+            text-align: center;
+        }
+        .container{
+            border: 2px solid gray;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style-type:decimal-leading-zero;
+            background: #eee;
+            width: 95%;
+            padding: 10px 5px;
+            margin-Top: 5px;
+            margin: 5px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 5px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="index.html">Back Home</a>
+    </h1>
+
+    <p class="message"></p>
+    <div class="container">
+        <h1 style="text-align: center">JavaScript Todo App</h1>
+        <form action="#">
+            <input type="text" style="padding: 5px 15px; border-radius: 15px; width: 60%;">
+            <i style="margin-left: 5px; cursor: pointer;">
+                <!-- Add -->
+                <!-- We are using an icon instead -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-circle-fill success" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                </svg>
+            </i>
+        </form>
+        <ul></ul>
+    </div>
+
+    <script>
+        var input = document.querySelector('input')
+        var ul = document.querySelector('ul')
+        var add = document.querySelector('i')
+        var message = document.querySelector('.message')
+        
+        // console.log(input)
+        // console.log(ul)
+        // console.log(add)
+        add.onclick = function(){
+            if (input.value != ''){
+                // alert(`"${input.value}" has being added successfully`)
+                message.innerHTML = `"${input.value}" has being added successfully`
+                setTimeout(()=>{
+                    message.innerHTML = ""
+                }, 2000)
+                
+                var li = document.createElement('li')
+                var span = document.createElement('span')
+                // console.log(input.value)
+                span.innerHTML = 'X'
+                li.innerHTML = input.value + `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x-circle-fill close" viewBox="0 0 16 16" style="cursor: pointer">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>
+                `
+                ul.append(li)
+                // Clear Input Field
+                input.value = ''
+            } else {
+                // alert("Please you cannot submit an Empty Form")
+                message.innerHTML = "Please you cannot submit an Empty Form"
+                setTimeout(()=>{
+                    message.innerHTML = ""
+                }, 2000)
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>
