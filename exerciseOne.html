@@ -86,6 +86,12 @@
                 ul.append(li)
                 // Clear Input Field
                 input.value = ''
+                
+                // setTimeout(()=> {
+                //     var arr = document.querySelectorAll('li')
+                //     console.log(arr.length)
+                // }, 2000)
+
             } else {
                 // alert("Please you cannot submit an Empty Form")
                 message.innerHTML = "Please you cannot submit an Empty Form"
@@ -93,7 +99,28 @@
                     message.innerHTML = ""
                 }, 2000)
             }
-            
+            // ul.forEach(e=>console.log(e))
+            var arr = document.querySelectorAll('li')
+            var close = document.querySelectorAll('.close')
+            close.forEach(elem => {
+                elem.addEventListener('click', (e) => {
+                    var element = e.target.parentElement
+                    // console.log(element.toString())
+                    arr.forEach(listItem => {
+                        if ( e.target.parentElement != listItem.innerHTML.slice(0, listItem.innerHTML.length).substring(10,listItem.innerHTML.length).trim() ){
+                            arr.shift()
+                            console.log(e.target, 'true')
+                        }else{
+                            console.log(e.target, 'false')
+
+                        }
+                            // console.log(listItem.innerHTML.slice(0, listItem.innerHTML.length).substring(10,listItem.innerHTML.length).trim())
+                            var svg = listItem.innerHTML.slice(0, listItem.innerHTML.length).substring(10,listItem.innerHTML.length).trim()
+                            // console.log(svg)
+                    })
+                    // IT IS AT THIS POINT I CAME TO REALIZE THAT ACCESSING DOM WITH VANILLA JAVASCRIPT IS RUBBISH
+                })
+            })
         }
 
 
