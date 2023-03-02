@@ -72,38 +72,44 @@
 
 
         var crossAxis = 0;
-        up.addEventListener("click", (e) => {
-            crossAxis -= 1
-            box.innerHTML = `cross axis(up) ${crossAxis}`
-            box.style.marginTop = `${crossAxis}px`
-        })
+        up.addEventListener("click", (e) => moveUp())
         
-        down.addEventListener("click", (e) => {
-            crossAxis += 1
-            box.innerHTML = `cross axis(down) ${crossAxis}`
-            box.style.marginTop = `${crossAxis}px`
-        })
+        down.addEventListener("click", (e) => moveDown())
         
         var mainAxis = 0
-        right.addEventListener("click", (e) => {
-            mainAxis += 1
-            box.innerHTML = `main axis(right) ${mainAxis}`
-            box.style.marginLeft = `${mainAxis}px`
-        })
-        left.addEventListener("click", (e) => {
-            mainAxis -= 1
-            box.innerHTML = `main axis(left) ${mainAxis}`
-            box.style.marginLeft = `${mainAxis}px`
-        })
+        right.addEventListener("click", (e) => moveRight())
+        left.addEventListener("click", (e) => moveLeft())
 
         // Keyevents
         document.addEventListener('keydown',(e)=>{
             console.log(e.key)
-            // if(e.key == 'ArrowUp')
-            // if(e.key == 'ArrowDown')
-            // if(e.key == 'ArrowLeft')
-            // if(e.key == 'ArrowURight')
+            if(e.key == 'ArrowUp') moveUp()
+            if(e.key == 'ArrowDown') moveDown()
+            if(e.key == 'ArrowRight') moveRight()
+            if(e.key == 'ArrowLeft') moveLeft()
         })
+
+        function moveUp(){
+            crossAxis -= 1
+            box.innerHTML = `cross axis(up) ${crossAxis}`
+            box.style.marginTop = `${crossAxis}px`
+        }
+
+        function moveDown(){
+            crossAxis += 1
+            box.innerHTML = `cross axis(down) ${crossAxis}`
+            box.style.marginTop = `${crossAxis}px`
+        }
+        function moveRight(){
+            mainAxis += 1
+            box.innerHTML = `main axis(right) ${mainAxis}`
+            box.style.marginLeft = `${mainAxis}px`
+        }
+        function moveLeft(){
+            mainAxis -= 1
+            box.innerHTML = `main axis(left) ${mainAxis}`
+            box.style.marginLeft = `${mainAxis}px`
+        }
         
 
     </script>
