@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .controls-Container {
+            /* border: 1px solid gray; */
+            width: 150px;
+            position: relative;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .up {
+            position: absolute;
+            left: 60px;
+        }
+        .right {
+            position: absolute;
+            right: 0px;
+            top: 40px;
+        }
+        .down {
+            position: absolute;
+            bottom: 0px;
+            left: 50px;
+        }
+        .left {
+            position: absolute;
+            left: 0px;
+            top: 40px;
+        }
+        
+        /* B o x */
+        .box {
+            width: 10px;
+            height: 10px;
+            background: #aaa;
+            /* margin-left: 100px; */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>A simple Game</h1>
+    <!-- Controls -->
+    <div class="controls-Container">
+        <div class="up">
+            <button>UP</button>
+        </div>
+        <div class="right">
+            <button>RIGHT</button>
+        </div>
+        <div class="down">
+            <button>DOWN</button>
+        </div>
+        <div class="left">
+            <button>LEFT</button>
+        </div>
+    </div>
+
+    <div class="box"></div>
+
+    <script>
+        var up = document.querySelector('.up')
+        var right = document.querySelector('.right')
+        var down = document.querySelector('.down')
+        var left = document.querySelector('.left')
+        var box = document.querySelector('.box')
+
+
+        var crossAxis = 0;
+        up.addEventListener("click", (e) => moveUp())
+        
+        down.addEventListener("click", (e) => moveDown())
+        
+        var mainAxis = 0
+        right.addEventListener("click", (e) => moveRight())
+        left.addEventListener("click", (e) => moveLeft())
+
+        // Keyevents
+        document.addEventListener('keydown',(e)=>{
+            console.log(e.key)
+            if(e.key == 'ArrowUp') moveUp()
+            if(e.key == 'ArrowDown') moveDown()
+            if(e.key == 'ArrowRight') moveRight()
+            if(e.key == 'ArrowLeft') moveLeft()
+        })
+
+        function moveUp(){
+            crossAxis -= 1
+            box.innerHTML = `cross axis(up) ${crossAxis}`
+            box.style.marginTop = `${crossAxis}px`
+        }
+
+        function moveDown(){
+            crossAxis += 1
+            box.innerHTML = `cross axis(down) ${crossAxis}`
+            box.style.marginTop = `${crossAxis}px`
+        }
+        function moveRight(){
+            mainAxis += 1
+            box.innerHTML = `main axis(right) ${mainAxis}`
+            box.style.marginLeft = `${mainAxis}px`
+        }
+        function moveLeft(){
+            mainAxis -= 1
+            box.innerHTML = `main axis(left) ${mainAxis}`
+            box.style.marginLeft = `${mainAxis}px`
+        }
+        
+
+    </script>
+</body>
+</html>
