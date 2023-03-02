@@ -108,8 +108,9 @@
                     // console.log(element.toString())
                     arr.forEach(listItem => {
                         if ( e.target.parentElement != listItem.innerHTML.slice(0, listItem.innerHTML.length).substring(10,listItem.innerHTML.length).trim() ){
-                            arr.shift()
-                            console.log(e.target, 'true')
+                            // arr.shift()
+                            // console.log(e.target, 'true')
+                            message.innerHTML = "Deleting..."
                         }else{
                             console.log(e.target, 'false')
 
