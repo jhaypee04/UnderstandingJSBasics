@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 30px;
+            width: 30px;
+            /* border: 2px solid black; */
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="index.html">Back Home</a>
+    </h1>
+    <h1>Random Rainbow</h1>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+
+    <script>
+        var colors = [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "indigo",
+            "violet"
+        ]
+        var rand = Math.floor(Math.random() * (colors.length - 1))
+        console.log(rand)
+        var divs = document.querySelectorAll('div')
+        divs.forEach((div, index) => {
+            switch(index){
+                case 0:
+                    div.style.backgroundColor = colors[rand]
+                    break;
+                case 1:
+                    div.style.backgroundColor = colors[rand+1]
+                    break;
+                case 2:
+                    div.style.backgroundColor = colors[rand+2]
+                    break;
+                case 3:
+                    div.style.backgroundColor = colors[rand+3]
+                    break;
+                case 4:
+                    div.style.backgroundColor = colors[rand+4]
+                    break;
+                case 5:
+                    div.style.backgroundColor = colors[rand+5]
+                    break;
+                case 6:
+                    div.style.backgroundColor = colors[rand+6]
+                    break;
+                // default:
+                //     div.style.backgroundColor = colors[rand]
+            }
+        })
+    </script>
+</body>
+</html>

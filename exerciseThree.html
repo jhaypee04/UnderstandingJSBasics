@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise Three</title>
+    <style>
+        .container {
+            border: 3px solid black;
+            width: 15%;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            padding: 5px;
+        }
+        .item {
+            width: 100%;
+            height: 100px;
+            border: 3px solid black;
+            display: none;
+        }
+        div.button {
+            width: 10%;
+            margin: 0 auto;
+        }
+        .block {
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a href="index.html">Back Home</a>
+  </h1>
+    <script>
+        window.onload = () => {
+            var one = document.querySelector('.one')
+            var two = document.querySelector('.two')
+            var three = document.querySelector('.three')
+            var next = document.querySelector('.next')
+            var prev = document.querySelector('.prev')
+
+            // one.className = 'block'
+            one.style.display='block'
+            one.style.backgroundColor = 'yellowgreen'
+            two.style.backgroundColor = 'green'
+
+            var c = 0
+            setInterval(()=>{
+                // if(one.className == 'block'){
+                //     one.classList.remove("block")
+                //     two.className = 'block'
+                //     console.log(one.className == 'block')
+                // }else {
+                //     two.classList.remove("block")
+                //     one.className = 'block'
+                // }
+                // console.log(c++)
+            }, 1000)
+
+
+            next.onclick = () => {
+                one.style.display='none'
+                two.style.display='block'
+            }
+            prev.onclick = () => {
+                one.style.display='block'
+                two.style.display='none'
+            }
+        }
+    </script>
+
+    <h1>Slider Carousel</h1>
+    <div class="container">
+      <div class="item one">Item One</div>
+      <div class="item two">Item Two</div>
+    </div>
+    <div class="button">
+      <button class="prev">Previous</button>
+      <button class="next">Next</button>
+    </div>
+
+    
+  </body>
+</html>
