@@ -42,35 +42,42 @@
         }
 
     </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>A simple Game</h1>
+    <header>
+        <h1>WDD PRACTICALS</h1>
+    </header>
+    <h1>
+        <a href="../index.html">Back Home</a>
+    </h1>
+
+    <h1 style="text-align: center">A simple Game Console</h1>
     <!-- Controls -->
     <div class="controls-Container">
         <div class="up">
-            <button>UP</button>
+            <button>UP / W</button>
         </div>
         <div class="right">
-            <button>RIGHT</button>
+            <button>RT / D</button>
         </div>
         <div class="down">
-            <button>DOWN</button>
+            <button>DOWN / S</button>
         </div>
         <div class="left">
-            <button>LEFT</button>
+            <button>LT / A</button>
         </div>
     </div>
 
     <div class="box"></div>
 
     <script>
-        var up = document.querySelector('.up')
+        let up = document.querySelector('.up')
         var right = document.querySelector('.right')
         var down = document.querySelector('.down')
         var left = document.querySelector('.left')
         var box = document.querySelector('.box')
-
-
+        
         var crossAxis = 0;
         up.addEventListener("click", (e) => moveUp())
         
@@ -82,36 +89,79 @@
 
         // Keyevents
         document.addEventListener('keydown',(e)=>{
-            console.log(e.key)
-            if(e.key == 'ArrowUp') moveUp()
-            if(e.key == 'ArrowDown') moveDown()
-            if(e.key == 'ArrowRight') moveRight()
-            if(e.key == 'ArrowLeft') moveLeft()
+            // console.log(e.key)
+            if(e.key == 'ArrowUp' || e.key ==  'w') moveUp()
+            if(e.key == 'ArrowDown' || e.key ==  's') moveDown()
+            if(e.key == 'ArrowRight' || e.key ==  'd') moveRight()
+            if(e.key == 'ArrowLeft' || e.key ==  'a') moveLeft()
         })
 
         function moveUp(){
             crossAxis -= 1
             box.innerHTML = `cross axis(up) ${crossAxis}`
             box.style.marginTop = `${crossAxis}px`
+            style(up)
+            removeStyle(down,right,left)
         }
 
         function moveDown(){
             crossAxis += 1
             box.innerHTML = `cross axis(down) ${crossAxis}`
             box.style.marginTop = `${crossAxis}px`
+            style(down)
+            removeStyle(up,right,left)
         }
         function moveRight(){
             mainAxis += 1
             box.innerHTML = `main axis(right) ${mainAxis}`
             box.style.marginLeft = `${mainAxis}px`
+            style(right)
+            removeStyle(down,up,left)
         }
         function moveLeft(){
             mainAxis -= 1
             box.innerHTML = `main axis(left) ${mainAxis}`
             box.style.marginLeft = `${mainAxis}px`
+            style(left)
+            removeStyle(down,right,up)
         }
         
+        function style(up,down,right,left){
+            console.log(up.style)
+            if(up == undefined ) return
+            up.style.borderWidth = "2px"
+            up.style.borderStyle = "solid"
+            up.style.borderColor = "black"
 
+            if(down == undefined ) return
+            down.style.borderWidth = "2px"
+            down.style.borderStyle = "solid"
+            down.style.borderColor = "black"
+            
+            if(right == undefined ) return
+            right.style.borderWidth = "2px"
+            right.style.borderStyle = "solid"
+            right.style.borderColor = "green"
+            
+            if(left == undefined ) return
+            left.style.borderWidth = "2px"
+            left.style.borderStyle = "solid"
+            left.style.borderColor = "black"
+        }
+
+        function removeStyle(up,down,right,left) {
+            if(up == undefined ) return
+            up.style.borderWidth = "0px"
+
+            if(down == undefined ) return
+            down.style.borderWidth = "0px"
+            
+            if(right == undefined ) return
+            right.style.borderWidth = "0px"
+            
+            if(left == undefined ) return
+            left.style.borderWidth = "0px"
+        }
     </script>
 </body>
 </html>
