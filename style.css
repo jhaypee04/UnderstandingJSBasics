@@ -9,7 +9,8 @@ header {
     padding: 1px 5px;
     box-sizing: border-box;
     color: #eee;
-    letter-spacing: 15px;
+    letter-spacing: 2px;
+    font-size: 10px;
 }
 .card-container {
     width: 100%;
