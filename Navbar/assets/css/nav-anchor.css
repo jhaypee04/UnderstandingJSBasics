@@ -1,0 +1,16 @@
+a {
+    text-decoration: none;
+}
+.menu a, a.menu-bar {
+    background-color: pink;
+    padding: 10px;
+    border-radius: 20px;
+}
+.menu a:hover, a.menu-bar:hover {
+    background: salmon;
+    color: black;
+}
+.menu a:active, a.menu-bar:active {
+    background: pink;
+    color: rgb(90, 88, 88);
+}

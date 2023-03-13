@@ -1,0 +1,19 @@
+@media screen and (max-width: 520px) {
+     a {
+        animation: 4s linear 0s slide-down;
+    }
+    @keyframes slide-down {
+        from {
+            /* transform: translateY(0px) */
+            /* height: 0px; */
+            /* display: none; */
+        }
+        to {
+            /* transform: translateY(11px); */
+            /* height: 200px; */
+            /* display: block */
+        }
+
+    }
+
+}

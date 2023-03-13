@@ -1,0 +1,24 @@
+@media screen and (max-width:520px) {
+    nav {
+        display: block;
+    }
+    .logo, .menu {
+        background: #000;
+        color: white;
+    }
+    a.menu-bar{
+        display: block;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        width: 97%
+    }
+    .menu a {
+        display: block;
+        border-radius: 0px;
+    }
+    .block {
+        display: block;
+    }
+}

@@ -1,0 +1,29 @@
+@media screen and (max-width: 520px) {
+    .container {
+        grid-template-areas: 
+        "nav"
+        "main"
+        "section"
+    ;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    }
+    main {
+        height:fit-content;
+        margin: 0 10px;
+        
+    }
+    section {
+        height: fit-content;
+        margin: 0 10px;
+    }
+    .option {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 5px;
+        display: flex;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}
