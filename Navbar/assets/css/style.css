@@ -2,7 +2,7 @@ nav, .logo {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    height: 8vh
+    height: 8vh;
 }
 a.menu-bar{
     display: none;
