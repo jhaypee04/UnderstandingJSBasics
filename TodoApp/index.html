@@ -34,6 +34,20 @@
             justify-content: space-between;
             border-left: 5px solid greenyellow;
         }
+        h2 {
+            text-align: end;
+            margin-right: 20px;
+        }
+        h2 a {
+            text-decoration: none;
+            background: #650a8f;
+            padding: 10px;
+            border-radius: 10px;
+            color: orange;
+        }
+        h2 a::after {
+            content: '>'
+        }
     </style>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +78,10 @@
         </form>
         <ul></ul>
     </div>
+
+    <h2>
+        <a href="welcome.html">Go to App</a>
+    </h2>
 
     <script>
         var input = document.querySelector('input')
