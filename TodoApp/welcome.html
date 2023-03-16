@@ -5,126 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="app.css">
     <style>
-        body {
-            background: rgb(207, 173, 179);
-            padding: 5vh 0;
-            margin: 0;
-            font-family: sans-serif;
+        :root {
+            --primary: rgb(250, 90, 54);
+            --primary-hover: rgb(250, 125, 97);
+            --grey: rgb(245, 244, 244)
         }
         .app {
-            max-width: 300px;
-            height: 90vh;
-            margin: 0 auto;
-            padding: 2vh 20px;
+            background: var(--grey);
+        }
+        .pending_task{
+            font-size: 11px;
+        }
+        header{
+            padding: 2vh 0;
+        }
+        header, form, .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .left .greeting, .heading, .card_title {
+            font-weight: bold;
+        }
+        header .left .pending_task {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        header .right {
+            width: 35px;
+            border-radius: 50%;
+        }
+        header .right img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        section, .cards {
+            margin: 2vh 0 4vh 0;
+        }
+        /* form  {
+        } */
+        form div input {
+            width: 210px;
+            border-radius: 20px;
+            outline: 0;
+            border: 0;
+            padding: 10px 10px 10px 15px;
+        }
+        form .funnel_icon {
+            background: var(--primary);
+            border-radius: 50%;
+            padding:4px 5px 1px 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 5px 15px 0px rgb(250, 90, 54, .6);
+        }
+        form .funnel_icon:hover {
+            background: var(--primary-hover);
+        }
+        form .funnel_icon:active {
+            background: var(--primary);
+        }
+        form .funnel_icon a svg {
+            fill: white;
+        }
+        .card {
+            width: 125px;
+            height: 200px;
+            padding: 15px 20px;
             box-sizing: border-box;
             background: white;
             border-radius: 20px;
-            box-shadow: 1px 2px 2px rgb(128, 128, 128, .3);
         }
-        header {
-            padding: 4vh 0 6vh 0;
+        .card .card_title {
+            font-size: 14px;
         }
-        main {
-            height: 65vh;
-            
-        }
-        main .heading {
-            height: 10vh;
-            font-size:large;
-            font-weight: bold;
-            
-        }
-        main .heading a {
-            color:rgb(250, 90, 54)
-        }
-        main .image img{
-            width: 100%;
-            height: 30vh;
-        }
-        main .message {
-            width: 70%;
-        }
-        main .message p{
-            font-size: 12px;
-        }
-        main .icon {
-            text-align: center;
-            margin: 4vh auto 0 auto;
-            padding: 4px 0 1px 0;
-            width: 34px;
-            height: 36px;
-            border: 1px solid #9a9a9a;
-            border-radius: 50%;
-            box-sizing: border-box;
-        }
-        main .icon svg{
-            fill: black;
-        }
-        main .icon svg:hover {
-            fill: rgb(73, 72, 72);
-        }
-        main .icon svg:active {
-            fill: rgb(0, 0, 0);
-            user-select: none;
-        }
-        footer{
-            height: 5vh;
-        }
-        footer .button {
-            text-align: center;
-        }
-        footer .button a{
-            text-decoration: none;
-            background: rgb(250, 90, 54);
-            color: white;
-            padding: 1vh 30px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px 0px rgb(250, 90, 54, .6);
-        }
-        footer .button a:hover {
-            background: rgb(252, 128, 100);
-            color: white;
-        }
-        footer .button a:active {
-            background: rgb(250, 90, 54);
-            color: white;
+        .card .pending_task {
+            color: var(--grey)
         }
     </style>
 </head>
 <body>
     <div class="app">
         <header>
-            <span class="title">Taskoo</span>
-        </header>
-        <main>
-            <div class="heading">
-                <div>Manage your</div>
-                <div>team &amp; everything</div>
-                <div>
-                    <span>with </span>
-                    <a href="#">taskoo</a>
+            <div class="left">
+                <div class="greeting">
+                    <span>Hi</span>,
+                    <span>Johnpaul</span>
+                </div>
+                <div class="pending_task">
+                    10 task pending
                 </div>
             </div>
-            <div class="image">
-                <img src="3-2.jpg" alt="graphic">
+            <div class="right">
+                <img src="jp.jpg" alt="jp">
             </div>
-            <div class="message">
-                <p>
-                    When you're overwhelmed by the amount of work you have on your plate, stop and rethink.
-                </p>
+        </header>
+        <section>
+            <form action="#">
+                <div>
+                    <input type="search" name="" id=""
+                        placeholder="Search"
+                    >
+                </div>
+                <div class="funnel_icon">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path  d="M14 13v7h-4v-7L2.95 4h18.1Zm-2-.7L16.95 6h-9.9Zm0 0Z"/></svg>
+                    </a>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="heading">Categories</div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card_title">Mobile App</div>
+                    <div class="pending_task">
+                        <span>10</span>
+                        <span>Tasks</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_title">Website</div>
+                    <div class="pending_task">
+                        <span>10</span>
+                        <span>Tasks</span>
+                    </div>
+                </div>
             </div>
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
-                  </svg>
-            </div>
-        </main>
-        <footer>
-            <div class="button">
-                <a href="#">Let's Start</a>
-            </div>
-        </footer>
+        </section>
     </div>
 </body>
 </html>

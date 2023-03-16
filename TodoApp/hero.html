@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        :root {
+            --primary: rgb(250, 90, 54);
+        }
+        header {
+            padding: 4vh 0 6vh 0;
+        }
+        main {
+            height: 65vh;
+            
+        }
+        main .heading {
+            height: 10vh;
+            font-size:large;
+            font-weight: bold;
+            
+        }
+        main .heading a {
+            color:var(--primary)
+        }
+        main .image img{
+            width: 100%;
+            height: 30vh;
+        }
+        main .message {
+            width: 70%;
+        }
+        main .message p{
+            font-size: 12px;
+        }
+        main .icon {
+            text-align: center;
+            margin: 4vh auto 0 auto;
+            padding: 4px 0 1px 0;
+            width: 34px;
+            height: 36px;
+            border: 1px solid #9a9a9a;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        main .icon svg{
+            fill: black;
+        }
+        main .icon svg:hover {
+            fill: rgb(73, 72, 72);
+        }
+        main .icon svg:active {
+            fill: rgb(0, 0, 0);
+            user-select: none;
+        }
+        footer{
+            height: 5vh;
+        }
+        footer .button {
+            text-align: center;
+        }
+        footer .button a{
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            padding: 1vh 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 0px rgb(250, 90, 54, .6);
+        }
+        footer .button a:hover {
+            background: rgb(252, 128, 100);
+            color: white;
+        }
+        footer .button a:active {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <span class="title">Taskoo</span>
+        </header>
+        <main>
+            <div class="heading">
+                <div>Manage your</div>
+                <div>team &amp; everything</div>
+                <div>
+                    <span>with </span>
+                    <a href="#">taskoo</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="3-2.jpg" alt="graphic">
+            </div>
+            <div class="message">
+                <p>
+                    When you're overwhelmed by the amount of work you have on your plate, stop and rethink.
+                </p>
+            </div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                  </svg>
+            </div>
+        </main>
+        <footer>
+            <div class="button">
+                <a href="welcome.html">Let's Start</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
