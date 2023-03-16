@@ -10,10 +10,11 @@
         :root {
             --primary: rgb(250, 90, 54);
             --primary-hover: rgb(250, 125, 97);
-            --grey: rgb(245, 244, 244)
+            --bg: rgb(245, 244, 244);
+            --grey: rgb(109, 109, 109);
         }
         .app {
-            background: var(--grey);
+            background: var(--bg);
         }
         .pending_task{
             font-size: 11px;
@@ -21,7 +22,7 @@
         header{
             padding: 2vh 0;
         }
-        header, form, .cards {
+        header, form, .cards, .heading {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -29,9 +30,10 @@
         header .left .greeting, .heading, .card_title {
             font-weight: bold;
         }
-        header .left .pending_task {
+        header .left .pending_task, .heading .pending_task a {
             font-weight: bold;
             color: var(--primary);
+            text-decoration: none;
         }
         header .right {
             width: 35px;
@@ -71,7 +73,7 @@
         }
         .card {
             width: 125px;
-            height: 200px;
+            /* height: 200px; */
             padding: 15px 20px;
             box-sizing: border-box;
             background: white;
@@ -82,6 +84,12 @@
         }
         .card .pending_task {
             color: var(--grey)
+        }
+        .card .image img {
+            width: 100%;
+            margin: 10px 0 0 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     </style>
 </head>
@@ -124,6 +132,9 @@
                         <span>10</span>
                         <span>Tasks</span>
                     </div>
+                    <div class="image">
+                        <img src="love.jpg" alt="">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card_title">Website</div>
@@ -131,6 +142,17 @@
                         <span>10</span>
                         <span>Tasks</span>
                     </div>
+                    <div class="image">
+                        <img src="love.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="heading">
+                <div>Ongoing Task</div>
+                <div class="pending_task">
+                    <a href="#">See all</a>
                 </div>
             </div>
         </section>
