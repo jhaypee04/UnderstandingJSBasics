@@ -13,8 +13,12 @@
             --bg: rgb(245, 244, 244);
             --grey: rgb(109, 109, 109);
         }
+        .gray_text {
+            color: var(--grey)
+        }
         .app {
             background: var(--bg);
+            overflow-y: auto;
         }
         .pending_task{
             font-size: 11px;
@@ -22,7 +26,7 @@
         header{
             padding: 2vh 0;
         }
-        header, form, .cards, .heading {
+        header, form, .cards, .heading, .card_title {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,7 +34,7 @@
         header .left .greeting, .heading, .card_title {
             font-weight: bold;
         }
-        header .left .pending_task, .heading .pending_task a {
+        header .left .pending_task, .heading .pending_task a, .contributors .pending_task{
             font-weight: bold;
             color: var(--primary);
             text-decoration: none;
@@ -39,7 +43,7 @@
             width: 35px;
             border-radius: 50%;
         }
-        header .right img {
+        header .right img, .card .contributors img {
             width: 100%;
             border-radius: 50%;
         }
@@ -83,13 +87,29 @@
             font-size: 14px;
         }
         .card .pending_task {
-            color: var(--grey)
+            color: var(--grey);
+            margin: 5px 0 2px 0;
         }
         .card .image img {
             width: 100%;
             margin: 10px 0 0 0;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
+        }
+        .full{
+            width: 100%;
+        }
+        .card .contributors {
+            width: 25px;
+            border-radius: 50%;
+            margin: 5px 0 0px 0;
+            padding-left: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .card .contributors img{
+            margin-left: -5px;
+            height: 30px;
         }
     </style>
 </head>
@@ -102,7 +122,7 @@
                     <span>Johnpaul</span>
                 </div>
                 <div class="pending_task">
-                    10 task pending
+                    20 done projects
                 </div>
             </div>
             <div class="right">
@@ -127,7 +147,7 @@
             <div class="heading">Categories</div>
             <div class="cards">
                 <div class="card">
-                    <div class="card_title">Mobile App</div>
+                    <div class="card_title">Frontend</div>
                     <div class="pending_task">
                         <span>10</span>
                         <span>Tasks</span>
@@ -137,10 +157,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card_title">Website</div>
+                    <div class="card_title">Backend</div>
                     <div class="pending_task">
                         <span>10</span>
-                        <span>Tasks</span>
+                        <span>Projects</span>
                     </div>
                     <div class="image">
                         <img src="love.jpg" alt="">
@@ -150,9 +170,45 @@
         </section>
         <section>
             <div class="heading">
-                <div>Ongoing Task</div>
+                <div>Ongoing Projects</div>
                 <div class="pending_task">
                     <a href="#">See all</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card full">
+                    <div class="card_title">
+                        <div class="left">Todo App</div>
+                        <div class="right pending_task gray_text">Frontend</div>
+                    </div>
+                    <div class="pending_task">
+                        Team members
+                    </div>
+                    <div class="contributors">
+                        <img src="jp.jpg" alt="">
+                        <img src="helen.jpg" alt="">
+                        <img src="chisom.jpg" alt="">
+                        <img src="helen.jpg" alt="">
+                        <img src="chisom.jpg" alt="">
+                        <span class="" style="color:var(--primary)">+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card full">
+                    <div class="card_title">
+                        <div class="left">Game Console</div>
+                        <div class="right pending_task gray_text">Frontend</div>
+                    </div>
+                    <div class="pending_task">
+                        Team members
+                    </div>
+                    <div class="contributors">
+                        <img src="jp.jpg" alt="">
+                        <img src="helen.jpg" alt="">
+                        <img src="chisom.jpg" alt="">
+                        <!-- <span class="" style="color:var(--primary)">+</span> -->
+                    </div>
                 </div>
             </div>
         </section>
