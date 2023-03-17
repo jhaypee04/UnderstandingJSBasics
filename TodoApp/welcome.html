@@ -13,6 +13,10 @@
             --bg: rgb(245, 244, 244);
             --grey: rgb(109, 109, 109);
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
         .gray_text {
             color: var(--grey)
         }
@@ -37,7 +41,6 @@
         header .left .pending_task, .heading .pending_task a, .contributors .pending_task{
             font-weight: bold;
             color: var(--primary);
-            text-decoration: none;
         }
         header .right {
             width: 35px;
@@ -80,8 +83,11 @@
             /* height: 200px; */
             padding: 15px 20px;
             box-sizing: border-box;
-            background: white;
             border-radius: 20px;
+            background: white;
+        }
+        .card:hover {
+            background: rgb(221, 220, 220);
         }
         .card .card_title {
             font-size: 14px;
@@ -175,42 +181,46 @@
                     <a href="#">See all</a>
                 </div>
             </div>
-            <div class="cards">
-                <div class="card full">
-                    <div class="card_title">
-                        <div class="left">Todo App</div>
-                        <div class="right pending_task gray_text">Frontend</div>
-                    </div>
-                    <div class="pending_task">
-                        Team members
-                    </div>
-                    <div class="contributors">
-                        <img src="jp.jpg" alt="">
-                        <img src="helen.jpg" alt="">
-                        <img src="chisom.jpg" alt="">
-                        <img src="helen.jpg" alt="">
-                        <img src="chisom.jpg" alt="">
-                        <span class="" style="color:var(--primary)">+</span>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card full">
-                    <div class="card_title">
-                        <div class="left">Game Console</div>
-                        <div class="right pending_task gray_text">Frontend</div>
-                    </div>
-                    <div class="pending_task">
-                        Team members
-                    </div>
-                    <div class="contributors">
-                        <img src="jp.jpg" alt="">
-                        <img src="helen.jpg" alt="">
-                        <img src="chisom.jpg" alt="">
-                        <!-- <span class="" style="color:var(--primary)">+</span> -->
+            <a href="#">
+                <div class="cards">
+                    <div class="card full">
+                        <div class="card_title">
+                            <div class="left">Todo App</div>
+                            <div class="right pending_task gray_text">Frontend</div>
+                        </div>
+                        <div class="pending_task">
+                            Team members
+                        </div>
+                        <div class="contributors">
+                            <img src="jp.jpg" alt="">
+                            <img src="helen.jpg" alt="">
+                            <img src="chisom.jpg" alt="">
+                            <img src="helen.jpg" alt="">
+                            <img src="chisom.jpg" alt="">
+                            <span class="" style="color:var(--primary)">+</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
+            <a href="#">
+                <div class="cards">
+                    <div class="card full">
+                        <div class="card_title">
+                            <div class="left">Game Console</div>
+                            <div class="right pending_task gray_text">Frontend</div>
+                        </div>
+                        <div class="pending_task">
+                            Team members
+                        </div>
+                        <div class="contributors">
+                            <img src="jp.jpg" alt="">
+                            <img src="helen.jpg" alt="">
+                            <img src="chisom.jpg" alt="">
+                            <!-- <span class="" style="color:var(--primary)">+</span> -->
+                        </div>
+                    </div>
+                </div>
+            </a>
         </section>
     </div>
 </body>
