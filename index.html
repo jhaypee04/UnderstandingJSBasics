@@ -4,143 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        :root {
+            --primary: rgb(250, 90, 54);
+        }
+        header {
+            padding: 4vh 0 6vh 0;
+        }
+        main {
+            height: 65vh;
+            
+        }
+        main .heading {
+            height: 10vh;
+            font-size:large;
+            font-weight: bold;
+            
+        }
+        main .heading a {
+            color:var(--primary)
+        }
+        main .image img{
+            width: 100%;
+            height: 30vh;
+        }
+        main .message {
+            width: 70%;
+        }
+        main .message p{
+            font-size: 12px;
+        }
+        main .icon {
+            text-align: center;
+            margin: 4vh auto 0 auto;
+            padding: 4px 0 1px 0;
+            width: 34px;
+            height: 36px;
+            border: 1px solid #9a9a9a;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        main .icon svg{
+            fill: black;
+        }
+        main .icon svg:hover {
+            fill: rgb(73, 72, 72);
+        }
+        main .icon svg:active {
+            fill: rgb(0, 0, 0);
+            user-select: none;
+        }
+        footer{
+            height: 5vh;
+        }
+        footer .button {
+            text-align: center;
+        }
+        footer .button a{
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            padding: 1vh 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 0px rgb(250, 90, 54, .6);
+        }
+        footer .button a:hover {
+            background: rgb(252, 128, 100);
+            color: white;
+        }
+        footer .button a:active {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <h1>WDD PRACTICALS</h1>
-    </header>
-
-    <div class="card-container">
-        <div class="card">
-            <a href="TodoApp/index.html">
-                <h2>
-                    Exercise 1-Todo App
-                </h2>
-            </a>
-            <p>This practical exercise will aid the understanding of the following concepts we learnt:</p>
-            <ul>
-                <li>JavaScript Alerts</li>
-                <li>JavaScript Data Types</li>
-                <li>JavaScript Strings</li>
-                <li>JavaScript Numbers</li>
-                <li>JavaScript Variables</li>
-                <li>Arithmetic Operators in JavaScript</li>
-            </ul>
-        </div>
-        <div class="card">
-            <a href="GameConsole-Controller/index.html">
-                <h2>
-                    Exercise 2- Game Console-Controller
-                </h2>
-            </a>
-            <p>This Exercise will help you to better understand how functions work and how they help us solve repeating of codes which is known in programming as redundancy</p>
-            <ul>
-                <li>JavaScript Functions</li>
-                <li>Learning how to reuse functions</li>
-            </ul>
-        </div>
-        <div class="card">
-            <a href="Slider-Carousel/index.html">
-                <h2>
-                    Exercise 3-Slider/Carousel
-                </h2>
-            </a>
-            <p>Customising our very own Slider Carousel</p>
-        </div>
-        <div class="card">
-            <a href="Rainbow/index.html">
-                <h2>
-                    Exercise 4-Make me a Rainbow
-                </h2>
-            </a>
-            <p>This exercise will help you to better understand the concept of Arrays as it relates with working with HTML and CSS in a website. You will learn about the:</p>
-            <ul>
-                <li>querySelectorAll() and how it generates a HTMLCollection in the DOM which is somewhat similar to arrays in JavaScript </li>
-                <li>id property of the document object</li>
-            </ul>
-        </div>
-        <div class="card">
-            <a href="Rainbow/randomRainbow.html">
-                <h2>
-                    Exercise 5-Random Rainbow
-                </h2>
-            </a>
-            <p>Adding a touch of randomization to our Rainbow</p>
-        </div>
-        <div class="card">
-            <a href="ChatApp/index.html">
-                <h2>
-                    Exercise 6-Chat App
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="Navbar/index.html">
-                <h2>
-                    Exercise 7-Navbar
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="SimpleCalculator/index.html">
-                <h2>
-                    Exercise 8-SimpleCalculator
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="Modal/index.html">
-                <h2>
-                    Exercise 9-Modal
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="ExamApp/index.html">
-                <h2>
-                    Exercise 10-Exam App 
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="ProjectCard/index.html">
-                <h2>
-                    Exercise 11-Project Card 
-                </h2>
-            </a>
-        </div>
-        <div class="card">
-            <a href="SearchBar/index.html">
-                <h2>
-                    Exercise 12-Search Bar
-                </h2>
-            </a>
-        </div>
+    <div class="app">
+        <header>
+            <span class="title">Web Design and Development</span>
+        </header>
+        <main>
+            <div class="heading">
+                <div>Manage your</div>
+                <div>team &amp; everything</div>
+                <div>
+                    <span>learn </span>
+                    <a href="#">W.D.D</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="3-2.jpg" alt="graphic">
+            </div>
+            <div class="message">
+                <p>
+                    When you're overwhelmed by the amount of work you have on your plate, stop and rethink.
+                </p>
+            </div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                  </svg>
+            </div>
+        </main>
+        <footer>
+            <div class="button">
+                <a href="https://8981v6-3000.csb.app/">Let's Start</a>
+            </div>
+        </footer>
     </div>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam veritatis velit ullam tenetur alias ab quas est hic dolorem debitis molestiae quod, repellendus labore vel tempore harum laudantium. Saepe, facere. Quisquam vel velit ab autem porro nisi ut debitis sed, repellat earum consequatur molestiae excepturi non rerum ad reprehenderit deserunt sit amet fugit corporis impedit! Reprehenderit, libero sequi. Eos blanditiis quod fugiat velit temporibus nesciunt modi eius dolorum dolor eum neque, deleniti quam. Praesentium quisquam at rerum ducimus aliquam voluptates eum beatae in adipisci nemo! Quaerat, repudiandae non minima quis reiciendis maiores quasi atque consequuntur iste, eos magni, dignissimos aperiam nulla aliquid veritatis! Odio, commodi eum facilis ullam labore tenetur sint, aspernatur omnis soluta ratione, ut dolores ducimus delectus voluptates asperiores corrupti ipsam laudantium. Aperiam est fugiat alias dolores, minus velit voluptatibus aut saepe aspernatur delectus vel error deleniti te
-    </p>
-        
-        
-        
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
 </body>
 </html>
