@@ -3,9 +3,12 @@
   <head>
     <title>Exercise Three</title>
     <style>
+      body {
+        background: #353434;
+      }
         .container {
             border: 3px solid black;
-            width: 15%;
+            max-width: 300px;
             height: 100px;
             margin: 0 auto;
             display: flex;
@@ -29,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
+    <script src="hammer.js"></script>
   </head>
   <body>
     <header>
@@ -40,39 +43,51 @@
   </h1>
     <script>
         window.onload = () => {
-            var one = document.querySelector('.one')
-            var two = document.querySelector('.two')
-            var three = document.querySelector('.three')
-            var next = document.querySelector('.next')
-            var prev = document.querySelector('.prev')
+          var one = document.querySelector('.one')
+          var two = document.querySelector('.two')
+          var three = document.querySelector('.three')
+          var next = document.querySelector('.next')
+          var prev = document.querySelector('.prev')
 
-            // one.className = 'block'
-            one.style.display='block'
-            one.style.backgroundColor = 'yellowgreen'
-            two.style.backgroundColor = 'green'
+          // one.className = 'block'
+          one.style.display='block'
+          one.style.backgroundColor = 'yellowgreen'
+          two.style.backgroundColor = 'green'
 
-            var c = 0
-            setInterval(()=>{
-                // if(one.className == 'block'){
-                //     one.classList.remove("block")
-                //     two.className = 'block'
-                //     console.log(one.className == 'block')
-                // }else {
-                //     two.classList.remove("block")
-                //     one.className = 'block'
-                // }
-                // console.log(c++)
-            }, 1000)
+          var c = 0
+          setInterval(()=>{
+              // if(one.className == 'block'){
+              //     one.classList.remove("block")
+              //     two.className = 'block'
+              //     console.log(one.className == 'block')
+              // }else {
+              //     two.classList.remove("block")
+              //     one.className = 'block'
+              // }
+              // console.log(c++)
+          }, 1000)
 
 
-            next.onclick = () => {
-                one.style.display='none'
-                two.style.display='block'
-            }
-            prev.onclick = () => {
-                one.style.display='block'
-                two.style.display='none'
-            }
+          next.onclick = () => {
+              one.style.display='none'
+              two.style.display='block'
+          }
+          prev.onclick = () => {
+              one.style.display='block'
+              two.style.display='none'
+          }
+
+          var myElement = document.getElementById('myElement');
+
+          // create a simple instance
+          // by default, it only adds horizontal recognizers
+          var mc = new Hammer(one);
+
+          // listen to events...
+          mc.on("panleft panright tap press", function(ev) {
+            one.style.display='none'
+              two.style.display='block'
+          });
         }
     </script>
 
