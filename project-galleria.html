@@ -87,12 +87,14 @@
             padding: 10px 0 0 0;
         }
         header .row2 {
-            font-weight: bold;
+            /* font-weight: bold; */
             text-align: center;
+        }
+        header .row2 .pending_task {
             color: var(--primary)
         }
         header .row2 svg {
-            fill: var(--primary)
+            fill: var(--grey)
         }
         header .message {
             background: linear-gradient(#ffffff, #dadada);
@@ -121,6 +123,32 @@
         }
         .bi-caret-up-fill {
             display: none;
+        }
+        section form {
+            margin: 15px 0;
+        }
+        section form div input {
+            width: 210px;
+            border-radius: 20px;
+            outline: 0;
+            border: 0;
+            padding: 10px 10px 10px 15px;
+        }
+        section form .funnel_icon {
+            background: var(--primary);
+            border-radius: 50%;
+            padding:4px 5px 1px 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 5px 15px 0px rgb(250, 90, 54, .6);
+        }
+        section form .funnel_icon:hover {
+            background: var(--primary-hover);
+        }
+        section form .funnel_icon:active {
+            background: var(--primary);
+        }
+        section form .funnel_icon a svg {
+            fill: white;
         }
         main .intro {
             text-align: center;
@@ -166,7 +194,7 @@
             padding: 80px 0 10px 10px;
             box-sizing:border-box;
             /* margin-top: 10px; */
-            /* margin: 10px auto 0; */
+            margin: 0px 0 10px 0;
             border-radius: 10px;
             cursor: pointer;
         }
@@ -243,7 +271,9 @@
                 </div>
             </div>
             <div class="row2">
+                <div style="font-size: 14px;">JavaScript</div>
                 <div class="pending_task">
+                    <span>Todo App</span>
                     Instructions
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
@@ -262,6 +292,20 @@
                 </ul>
             </div>
         </header>
+        <section>
+            <form action="#">
+                <div>
+                    <input type="search" name="" id=""
+                        placeholder="Search"
+                    >
+                </div>
+                <div class="funnel_icon">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path  d="M14 13v7h-4v-7L2.95 4h18.1Zm-2-.7L16.95 6h-9.9Zm0 0Z"/></svg>
+                    </a>
+                </div>
+            </form>
+        </section>
         <main>
             <div class="intro">Projects gallery</div>
             <div class="card-container">
