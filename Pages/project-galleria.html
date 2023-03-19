@@ -208,6 +208,17 @@
         .details:hover{
             background: rgb(228, 228, 228);
         }
+        .details span{
+            font-size: 12px;
+            color: white;
+            display: block;
+            text-align: center;
+            width: 70px;
+            margin: 5px auto -10px auto;
+            background: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
         .image-container:hover {
             border: 10px solid rgb(255, 250, 250);
         }
@@ -250,8 +261,9 @@
             border-top-left-radius: 60px;
             border-bottom-right-radius: 60px;
         }
-        img {
+        .image-container img {
             width: 80px;
+            height:80px;
             border-radius: 50%;
         }
     </style>
@@ -308,24 +320,24 @@
         </section>
         <main>
             <div class="intro">Projects gallery</div>
-            <div class="card-container">
-                <div class="image-container">
-                    <img src="jp.jpg" alt="">
-                </div>
-                <div class="card">
-                    <div class="details">
-                        <h1>Deborah Favour Olufemi</h1>
-                        <p>Name of Student</p>
-                        <h2>JavaScript StopWatch</h2>
-                        <p>Project Title</p>
-                        <h2>Web Design and Development</h2>
-                        <p>Course of Study</p>
+            <a href="#">
+                <div class="card-container">
+                    <div class="image-container" style="left: 80px;">
+                        <img src="jp.jpg" alt="">
                     </div>
-                </div>
+                    <div class="card" style="border-top-left-radius: 30px;">
+                        <div class="details">
+                            <h1>Instructor's Guide</h1>
+                            <h2>JavaScript StopWatch</h2>
+                            <p>Project Title</p>
+                            <span>See Project</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="card-container">
                 <div class="image-container">
-                    <img src="jp.jpg" alt="">
+                    <img src="helen.jpg" alt="">
                 </div>
                 <div class="card">
                     <div class="details">
@@ -335,6 +347,7 @@
                         <p>Project Title</p>
                         <h2>Web Design and Development</h2>
                         <p>Course of Study</p>
+                        <span>See Project</span>
                     </div>
                 </div>
             </div>
